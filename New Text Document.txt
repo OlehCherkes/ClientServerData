@@ -1,0 +1,53 @@
+INTERFACE:
+-создать аккаунт:
+	/register.php?data={"login":"XXX", "password":"XXX", "lvl_access": "XXX"}
+	Пример: /register.php?data={"type":"user","login":"useruser", "password":"user123", "lvl_access": "0"}
+-войти в аккаунт:
+	/login.php?data={"login":"XXX", "password":"XXX"}
+	
+-добавить	
+	Добавить машину:
+	/add.php?data={"type":"car","title":"XXX", "price":"XXX"}
+	Пример: /add.php?data={"type":"car","title":"Honda", "price":"4100.5"}
+	
+	
+-удалить
+	Удалить юзера:
+	/delete.php?data={"type":"user", "id":"XXX"}
+	Пример: /delete.php?data={"type":"user", "id":"1"}
+	
+	Удалить машину(товар):
+	/delete.php?data={"type":"car", "id":"XXX"}
+	Пример: /delete.php?data={"type":"car", "id":"1"}
+	
+	
+-изменить
+	Изменить юзера:
+	/edit.php?data={"type":"user", "id":"XXX", "login":"XXX", "password":"XXX", "lvl_access": "XXX"}
+	
+	Изменить товар:
+	/edit.php?data={"type":"car", "id":"XXX", "title":"XXX", "price":"XXX"}
+	
+	
+-поиск
+	Найти юзера:
+	/find.php?data={"type":"user", "login":"XXX"}
+	
+	Найти товар:
+	/find.php?data={"type":"car", "title":"XXX"}
+
+-получить
+	Получить ВСЕХ юзеров:
+	/get.php?data={"type":"user"}
+	
+	Получить ВЕСЬ товар:
+	/get.php?data={"type":"car"}
+	
+	
+Успешные запросы не возвращают ничего, если не ожидался возврат. Если есть ошибка, обязательно имеется "error".
+
+
+Все ошибки ассоциируются с 'error'.
+Например: {"error":"Too few filled fields"}
+Например: {"error":"404"}
+Например: {"error":"402"}
